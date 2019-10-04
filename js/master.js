@@ -1,13 +1,17 @@
-class todo {
-    constructor (name) {
-
+class toDo {
+    constructor(title) {
+        this.title = title;
+        this.list = [
+            this.listItem = {
+                itemContent = "",
+                itemSelected = false,
+            }
+        ]
     }
-
-    //make obj
-
-    //make list
 }
 
-//list does stuff
+let objects = [];
 
-//menu opens
+//for every entry put todo into objects
+
+//
