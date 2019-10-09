@@ -1,0 +1,54 @@
+$backgroundColor: #02182b;
+$red: #db162f;
+$white: #ffffff;
+$green: #1c7c54;
+$grey: #324a5f;
+$defMargin: 1rem;
+$defPadding: 1.5rem;
+$defBorderRadius: 0.5rem;
+
+@mixin btn($textColor, $bgColor) {
+  border-radius: $defBorderRadius / 2;
+  padding: $defPadding / 3;
+  margin: $defMargin / 3;
+  padding-left: $defPadding;
+  padding-right: $defPadding;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: $textColor;
+  background-color: $bgColor;
+  text-align: center;
+
+  &:hover {
+    color: lighten($textColor, 10%);
+    background-color: lighten($bgColor, 10%);
+  }
+  &:active {
+    color: $textColor;
+    background-color: $bgColor;
+  }
+}
+
+@mixin imp($color) {
+  border-color: $color;
+  border-radius: $defBorderRadius / 2;
+  padding: $defPadding / 3;
+  margin: $defMargin / 3;
+  padding-left: $defPadding;
+  padding-right: $defPadding;
+  font-size: 0.8em;
+  text-decoration: none;
+  text-align: center;
+}
+
+.addBtn {
+  @include btn($white, $green);
+}
+
+.deleteBtn {
+  @include btn($white, $red);
+}
+
+.addImp {
+  @include imp($green);
+}
