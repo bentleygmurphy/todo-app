@@ -1,9 +1,9 @@
 .addBtn {
   border-radius: 0.25rem;
-  padding: 0.5rem;
+  padding: 0.33333rem;
   margin: 0.33333rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-size: 0.8em;
   text-decoration: none;
   color: #ffffff;
@@ -18,10 +18,10 @@
 
 .deleteBtn {
   border-radius: 0.25rem;
-  padding: 0.5rem;
+  padding: 0.33333rem;
   margin: 0.33333rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-size: 0.8em;
   text-decoration: none;
   color: #ffffff;
@@ -37,10 +37,10 @@
 .addImp {
   border-color: #1c7c54;
   border-radius: 0.25rem;
-  padding: 0.5rem;
+  padding: 0.33333rem;
   margin: 0.33333rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-size: 0.8em;
   text-decoration: none;
   text-align: center; }
@@ -64,18 +64,18 @@ html {
   flex-direction: column;
   background-color: #ffffff; }
   .container .header {
-    padding: 1.5rem; }
+    padding: 1rem; }
   .container .main {
-    display: flex;
-    margin: 1rem; }
+    display: flex; }
     .container .main .toDoMenu {
-      width: 20%;
+      width: 30%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: 1rem; }
+      border-right: 1px solid #324a5f;
+      padding: 1rem; }
       .container .main .toDoMenu .addImp {
         display: none; }
     .container .main .toDoList {
-      width: 80%;
+      width: 70%;
       margin: 1rem; }

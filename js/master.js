@@ -1,3 +1,6 @@
+let toDos = [];
+let idcount = 0;
+
 class toDo {
   constructor(title) {
     this.id = Number();
@@ -13,13 +16,18 @@ class toDo {
     this.completedList = [];
   }
   addListItem(content) {
-    //list push listItem {-content -selected}
+    this.list.push(content);
   }
   completeSelected(items) {}
   removeCompleted(items) {}
 }
 
-let toDos = [];
+function displayItems() {
+  $(".listContainer").html("");
+  for (let i = 0; i < toDos.length; i++) {
+    $(".listContainer").append(`<div>${toDos[i].title}</div>`);
+  }
+}
 
 //for every entry put todo into objects
 
@@ -39,10 +47,15 @@ function addBtn(btnId, impId) {
   });
   $(impId).keypress(function(e) {
     if (e.which == 13) {
+      titleValue = $(impId).val();
+      let tempObj = new toDo();
+      tempObj.id = idcount;
+      tempObj.title = titleValue;
+      toDos.push(tempObj);
+      idcount ++;
+      displayItems();
       $(btnId).show();
       $(impId).hide();
-      //$('form#login').submit();
-      //create new object here
       return false;
     }
   });
