@@ -1,5 +1,5 @@
 let toDos = [];
-let idcount = 0;
+let toDoIdCount = 0;
 
 class toDo {
   constructor(title) {
@@ -22,23 +22,20 @@ class toDo {
   removeCompleted(items) {}
 }
 
-function displayItems() {
-  $(".listContainer").html("");
-  for (let i = 0; i < toDos.length; i++) {
-    $(".listContainer").append(`<div>${toDos[i].title}</div>`);
-  }
-}
-
-//for every entry put todo into objects
-
-//for every listItem show div
-
 function deleteBtn(id, target) {
   //btn id
   //target to delete
 }
 
-function addBtn(btnId, impId) {
+function displayToDos() {
+  $(".listContainer").html("");
+  for (let i = 0; i < toDos.length; i++) {
+    id = `list${toDos[i].id}`
+    $(".listContainer").append(`<div id="${id}" class="list">${toDos[i].title}</div>`);
+  }
+}
+
+function addToDoBtn(btnId, impId) {
   $(btnId).click(function() {
     $(btnId).hide();
     $(impId).val("");
@@ -49,16 +46,23 @@ function addBtn(btnId, impId) {
     if (e.which == 13) {
       titleValue = $(impId).val();
       let tempObj = new toDo();
-      tempObj.id = idcount;
+      tempObj.id = toDoIdCount;
       tempObj.title = titleValue;
       toDos.push(tempObj);
-      idcount ++;
-      displayItems();
+      toDoIdCount++;
       $(btnId).show();
       $(impId).hide();
+      displayToDos();
+      showList();
       return false;
     }
   });
 }
 
-addBtn("#newToDo", "#nameToDo");
+function showList() {
+  $('.list').each(function(i, obj) {
+    //for every list show a list and set selected true
+});
+}
+
+addToDoBtn("#newToDo", "#nameToDo");

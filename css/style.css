@@ -1,50 +1,3 @@
-.addBtn {
-  border-radius: 0.25rem;
-  padding: 0.33333rem;
-  margin: 0.33333rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 0.8em;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #1c7c54;
-  text-align: center; }
-  .addBtn:hover {
-    color: white;
-    background-color: #25a670; }
-  .addBtn:active {
-    color: #ffffff;
-    background-color: #1c7c54; }
-
-.deleteBtn {
-  border-radius: 0.25rem;
-  padding: 0.33333rem;
-  margin: 0.33333rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 0.8em;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #db162f;
-  text-align: center; }
-  .deleteBtn:hover {
-    color: white;
-    background-color: #eb3950; }
-  .deleteBtn:active {
-    color: #ffffff;
-    background-color: #db162f; }
-
-.addImp {
-  border-color: #1c7c54;
-  border-radius: 0.25rem;
-  padding: 0.33333rem;
-  margin: 0.33333rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 0.8em;
-  text-decoration: none;
-  text-align: center; }
-
 body,
 html {
   margin: 0;
@@ -64,17 +17,46 @@ html {
   flex-direction: column;
   background-color: #ffffff; }
   .container .header {
-    padding: 1rem; }
+    padding: 1rem;
+    color: #ffffff;
+    background-color: #02182b; }
   .container .main {
     display: flex; }
     .container .main .toDoMenu {
       width: 30%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       border-right: 1px solid #324a5f;
       padding: 1rem; }
-      .container .main .toDoMenu .addImp {
+      .container .main .toDoMenu .listContainer .list {
+        margin-bottom: 1rem; }
+        .container .main .toDoMenu .listContainer .list:hover {
+          cursor: pointer; }
+      .container .main .toDoMenu .addListBtn {
+        width: width;
+        border-radius: 0.25rem;
+        padding-top: 0.33333rem;
+        padding-bottom: 0.33333rem;
+        font-size: 0.8em;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #1c7c54;
+        text-align: center; }
+        .container .main .toDoMenu .addListBtn:hover {
+          color: white;
+          background-color: #25a670; }
+        .container .main .toDoMenu .addListBtn:active {
+          color: #ffffff;
+          background-color: #1c7c54; }
+      .container .main .toDoMenu .addListImp {
+        width: width;
+        border-color: #1c7c54;
+        border-radius: 0.25rem;
+        padding-top: 0.33333rem;
+        padding-bottom: 0.33333rem;
+        font-size: 0.8em;
+        text-decoration: none;
+        text-align: center;
         display: none; }
     .container .main .toDoList {
       width: 70%;

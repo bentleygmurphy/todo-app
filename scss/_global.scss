@@ -7,12 +7,11 @@ $defMargin: 1rem;
 $defPadding: 1rem;
 $defBorderRadius: 0.5rem;
 
-@mixin btn($textColor, $bgColor) {
+@mixin btn($textColor, $bgColor, $width) {
+  width: width;
   border-radius: $defBorderRadius / 2;
-  padding: $defPadding / 3;
-  margin: $defMargin / 3;
-  padding-left: $defPadding;
-  padding-right: $defPadding;
+  padding-top: $defPadding / 3;
+  padding-bottom: $defPadding / 3;
   font-size: 0.8em;
   text-decoration: none;
   color: $textColor;
@@ -29,26 +28,13 @@ $defBorderRadius: 0.5rem;
   }
 }
 
-@mixin imp($color) {
+@mixin imp($color, $width) {
+  width: width;
   border-color: $color;
   border-radius: $defBorderRadius / 2;
-  padding: $defPadding / 3;
-  margin: $defMargin / 3;
-  padding-left: $defPadding;
-  padding-right: $defPadding;
+  padding-top: $defPadding / 3;
+  padding-bottom: $defPadding / 3;
   font-size: 0.8em;
   text-decoration: none;
   text-align: center;
-}
-
-.addBtn {
-  @include btn($white, $green);
-}
-
-.deleteBtn {
-  @include btn($white, $red);
-}
-
-.addImp {
-  @include imp($green);
 }
