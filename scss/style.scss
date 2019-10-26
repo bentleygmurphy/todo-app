@@ -28,33 +28,49 @@ html {
   }
   .main {
     display: flex;
-
     .toDoMenu {
       width: 30%;
       display: flex;
       flex-direction: column;
       border-right: 1px solid $grey;
       padding: $defPadding;
+      .addBtn {
+        @include btn($white, $green, 100%);
+      }
+      .addImp {
+        @include imp($green, 100%);
+        display: none;
+      }
       .listContainer {
-        .list {
+        .list{
           margin-bottom: $defMargin;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           &:hover {
             cursor: pointer;
           }
         }
-      }
-      .addListBtn {
-          @include btn($white, $green, 100%);
-      }
-      .addListImp {
-        @include imp($green, 100%);
-        display: none;
+        // .listSelected {
+        //   background-color: $grey;
+        // }
       }
     }
     .toDoList {
       width: 70%;
       margin: $defMargin;
+      display: flex;
+      flex-direction: column;
+      .addBtn {
+        @include btn($white, $green, 50%);
+      }
+      .addImp {
+        @include imp($green, 50%);
+        display: none;
+      }
     }
   }
 }
-//when phone list whole screen
+@media only screen and (max-width: 600px) {
+  //stuff
+}
