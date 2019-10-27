@@ -1,8 +1,3 @@
-.closeX {
-  color: #db162f; }
-  .closeX:hover {
-    color: #eb3950; }
-
 body,
 html {
   margin: 0;
@@ -45,7 +40,8 @@ html {
         text-align: center; }
         .container .main .toDoMenu .addBtn:hover {
           color: white;
-          background-color: #25a670; }
+          background-color: #25a670;
+          cursor: pointer; }
         .container .main .toDoMenu .addBtn:active {
           color: #ffffff;
           background-color: #1c7c54; }
@@ -59,41 +55,66 @@ html {
         text-decoration: none;
         text-align: center;
         display: none; }
-      .container .main .toDoMenu .listContainer .list {
-        margin-bottom: 1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        .container .main .toDoMenu .listContainer .list:hover {
-          cursor: pointer; }
-    .container .main .toDoList {
-      width: 70%;
-      margin: 1rem;
-      display: flex;
-      flex-direction: column; }
-      .container .main .toDoList .addBtn {
-        width: 50%;
+      .container .main .toDoMenu #deleteBtn {
+        width: 100%;
         border-radius: 0.25rem;
         padding-top: 0.33333rem;
         padding-bottom: 0.33333rem;
         font-size: 0.8em;
         text-decoration: none;
         color: #ffffff;
-        background-color: #1c7c54;
-        text-align: center; }
-        .container .main .toDoList .addBtn:hover {
-          color: white;
-          background-color: #25a670; }
-        .container .main .toDoList .addBtn:active {
-          color: #ffffff;
-          background-color: #1c7c54; }
-      .container .main .toDoList .addImp {
-        width: 50%;
-        border-color: #1c7c54;
-        border-radius: 0.25rem;
-        padding-top: 0.33333rem;
-        padding-bottom: 0.33333rem;
-        font-size: 0.8em;
-        text-decoration: none;
+        background-color: #db162f;
         text-align: center;
+        margin-top: 1rem; }
+        .container .main .toDoMenu #deleteBtn:hover {
+          color: white;
+          background-color: #eb3950;
+          cursor: pointer; }
+        .container .main .toDoMenu #deleteBtn:active {
+          color: #ffffff;
+          background-color: #db162f; }
+      .container .main .toDoMenu .toDoContainer .toDo {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .container .main .toDoMenu .toDoContainer .toDo:hover {
+          cursor: pointer; }
+    .container .main .toDoList {
+      width: 70%;
+      margin: 1rem;
+      display: flex;
+      flex-direction: column; }
+      .container .main .toDoList .listContainer .listItem {
+        margin-bottom: 1rem; }
+        .container .main .toDoList .listContainer .listItem:hover {
+          cursor: pointer; }
+      .container .main .toDoList .listBtnContainer {
         display: none; }
+        .container .main .toDoList .listBtnContainer .addBtn {
+          width: 50%;
+          border-radius: 0.25rem;
+          padding-top: 0.33333rem;
+          padding-bottom: 0.33333rem;
+          font-size: 0.8em;
+          text-decoration: none;
+          color: #ffffff;
+          background-color: #1c7c54;
+          text-align: center; }
+          .container .main .toDoList .listBtnContainer .addBtn:hover {
+            color: white;
+            background-color: #25a670;
+            cursor: pointer; }
+          .container .main .toDoList .listBtnContainer .addBtn:active {
+            color: #ffffff;
+            background-color: #1c7c54; }
+        .container .main .toDoList .listBtnContainer .addImp {
+          width: 50%;
+          border-color: #1c7c54;
+          border-radius: 0.25rem;
+          padding-top: 0.33333rem;
+          padding-bottom: 0.33333rem;
+          font-size: 0.8em;
+          text-decoration: none;
+          text-align: center;
+          display: none; }

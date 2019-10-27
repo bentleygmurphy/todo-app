@@ -21,6 +21,7 @@ $defBorderRadius: 0.5rem;
   &:hover {
     color: lighten($textColor, 10%);
     background-color: lighten($bgColor, 10%);
+    cursor: pointer;
   }
   &:active {
     color: $textColor;
@@ -37,11 +38,4 @@ $defBorderRadius: 0.5rem;
   font-size: 0.8em;
   text-decoration: none;
   text-align: center;
-}
-
-.closeX {
-  color: $red;
-  &:hover {
-    color: lighten($red, 10%);
-  }
 }

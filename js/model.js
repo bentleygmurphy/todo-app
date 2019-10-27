@@ -12,16 +12,11 @@ var myToDos = new ToDoCollection();
 class ToDo {
   constructor(title) {
     this.title = title;
-    this.collection = ["test", "test", "test"];
+    this.selected = false;
+    this.collection = [];
     this.completedCollection = [];
   }
   add(content) {
-    this.collection.push(new ListItem(content));
-  }
-}
-
-class ListItem {
-  constructor(content) {
-    this.content = content;
+    this.collection.push(content);
   }
 }

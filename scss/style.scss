@@ -41,8 +41,13 @@ html {
         @include imp($green, 100%);
         display: none;
       }
-      .listContainer {
-        .list{
+      #deleteBtn {
+        @include btn($white, $red, 100%);
+        margin-top: $defMargin;
+        //display: none;
+      }
+      .toDoContainer {
+        .toDo {
           margin-bottom: $defMargin;
           display: flex;
           justify-content: space-between;
@@ -51,9 +56,6 @@ html {
             cursor: pointer;
           }
         }
-        // .listSelected {
-        //   background-color: $grey;
-        // }
       }
     }
     .toDoList {
@@ -61,12 +63,23 @@ html {
       margin: $defMargin;
       display: flex;
       flex-direction: column;
-      .addBtn {
-        @include btn($white, $green, 50%);
+      .listContainer {
+        .listItem {
+          margin-bottom: $defMargin;
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
-      .addImp {
-        @include imp($green, 50%);
+      .listBtnContainer {
         display: none;
+        .addBtn {
+          @include btn($white, $green, 50%);
+        }
+        .addImp {
+          @include imp($green, 50%);
+          display: none;
+        }
       }
     }
   }
