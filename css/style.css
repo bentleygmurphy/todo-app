@@ -65,7 +65,8 @@ html {
         color: #ffffff;
         background-color: #db162f;
         text-align: center;
-        margin-top: 1rem; }
+        margin-top: 0.5rem;
+        display: none; }
         .container .main .toDoMenu #deleteBtn:hover {
           color: white;
           background-color: #eb3950;
@@ -74,7 +75,8 @@ html {
           color: #ffffff;
           background-color: #db162f; }
       .container .main .toDoMenu .toDoContainer .toDo {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
+        padding: 0.33333rem;
         display: flex;
         justify-content: space-between;
         align-items: center; }
@@ -86,7 +88,8 @@ html {
       display: flex;
       flex-direction: column; }
       .container .main .toDoList .listContainer .listItem {
-        margin-bottom: 1rem; }
+        margin-bottom: 0.5rem;
+        padding: 0.33333rem; }
         .container .main .toDoList .listContainer .listItem:hover {
           cursor: pointer; }
       .container .main .toDoList .listBtnContainer {

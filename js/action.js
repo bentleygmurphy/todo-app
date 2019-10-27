@@ -26,9 +26,12 @@ function printToDo() {
   $(".toDoContainer").html("");
   for (let i = 0; i < myToDos.collection.length; i++) {
     toDoId = `toDo${i}`;
+    selId = `selId${i}`
     $(".toDoContainer").append(
       `<div id="${toDoId}" class="toDo">
-      ${myToDos.collection[i].title}
+        ${myToDos.collection[i].title}
+        <div id="${selId}">
+        </div>
       </div>`
     );
   }
@@ -40,11 +43,12 @@ function clickTodo() {
       $(".listBtnContainer").css("display", "flex");
       for(let j = 0; j < myToDos.collection.length; j++){
         myToDos.collection[j].selected = false;
-        $(`#toDo${j}`).css("background-color", "");
+        $(`#selId${j}`).html("")
       }
       myToDos.collection[i].selected = true;
-      $(`#toDo${i}`).css("background-color", "grey");
+      $(`#selId${i}`).append(`<i class="fas fa-arrow-right"></i>`)
       printListItem();
+      $("#deleteBtn").css("display", "block");
     });
   });
 }
@@ -82,8 +86,8 @@ function printListItem() {
       $(".listContainer").html("");
       for(let j = 0; j < myToDos.collection[i].collection.length; j++) {
         $(".listContainer").append(
-          `<div id="${toDoId}" class="toDo">
-          ${myToDos.collection[i].collection[j]}
+          `<div class="listItem">
+          - ${myToDos.collection[i].collection[j]}
           </div>`
         );  
       }
