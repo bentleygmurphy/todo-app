@@ -1,8 +1,8 @@
 //Welcome to the wild west 🌵
 
-$(window).on("load", refreshLocal());
-$(window).on("load", printToDo());
-$(window).on("load", clickTodo());
+// $(window).on("load", refreshLocal());
+// $(window).on("load", printToDo());
+// $(window).on("load", clickTodo());
 
 function addToDoBtn(btnId, impId) {
   $(btnId).click(function() {
@@ -19,8 +19,8 @@ function addToDoBtn(btnId, impId) {
       }
       $(btnId).show();
       $(impId).hide();
-      refreshLocal();
-      myToDos.collection = JSON.parse(localStorage.getItem("myToDos"));
+      // refreshLocal();
+      // myToDos.collection = JSON.parse(localStorage.getItem("myToDos"));
       printToDo();
       clickTodo();
       deleteTodo();
@@ -69,7 +69,7 @@ function deleteTodo() {
         myToDos.collection.splice(i, 1);
       }
     }
-    refreshLocal();
+    //refreshLocal();
     printToDo();
     clickTodo();
   });
@@ -117,7 +117,7 @@ function printListItem() {
   }
 }
 
-function refreshLocal() {
-  localStorage.removeItem(myToDos);
-  localStorage.setItem("myToDos", JSON.stringify(myToDos.collection));
-}
+// function refreshLocal() {
+//   localStorage.removeItem(myToDos);
+//   localStorage.setItem("myToDos", JSON.stringify(myToDos.collection));
+// }
