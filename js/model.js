@@ -8,7 +8,6 @@ class ToDoCollection {
 }
 
 var myToDos = new ToDoCollection();
-myToDos.collection = JSON.parse(localStorage.getItem("myToDos"));
 
 class ToDo {
   constructor(title) {

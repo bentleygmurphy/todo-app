@@ -20,6 +20,7 @@ function addToDoBtn(btnId, impId) {
       $(btnId).show();
       $(impId).hide();
       refreshLocal();
+      myToDos.collection = JSON.parse(localStorage.getItem("myToDos"));
       printToDo();
       clickTodo();
       deleteTodo();
